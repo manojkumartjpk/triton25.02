@@ -9,3 +9,5 @@ RUN mkdir -p /models/manoj/1 && \
 EXPOSE 8000
 EXPOSE 8001
 EXPOSE 8002
+
+CMD ["tritonserver", "--model-repository=/models", "--log-verbose=1", "--allow-gpu-metrics=true", "--allow-cpu-metrics=true"]
